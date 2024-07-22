@@ -1,0 +1,249 @@
+/* Основные стили */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    background-color: #121212; 
+    color: #e0e0e0; 
+    scroll-behavior: smooth; 
+}
+@font-face {
+    font-family: 'Minecraft';
+    src: url('static/minecraft.ttf') format('truetype');
+}
+
+body {
+    font-family: 'Minecraft', sans-serif;
+.top-box {
+    width: 100%;
+    height: 10vh;
+    background-color: rgba(31, 31, 31, 1);
+    display: flex;
+    align-items: center;
+    padding-left: 10px; 
+    position: fixed; 
+    top: 0;
+    z-index: 2;
+    backdrop-filter: blur(5px);
+}
+
+.top-box img {
+    height: 100%; 
+}
+.intro {
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3em; 
+    text-align: center;
+    color: #e0e0e0; 
+    z-index: 1; 
+    position: relative;
+    margin-top: 10vh; 
+}
+.intro p {
+  font-family: sans-serif;
+  text-align: center;
+  font-size: 80px;
+  font-weight: 800;
+  text-transform: uppercase;
+  background-image: url(https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExYTlmN2h0MnhhNHFqcDFwaWYxMXd0NjlrZTE0NDBoY3N0M2hiNnY5ayZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/XQsEy59pNgaVu6QlGi/giphy-downsized-large.gif);
+  background-size: cover;
+  color: transparent;
+  -moz-background-clip: text;
+  -webkit-background-clip: text;
+} 
+.main-box {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    position: relative;
+    z-index: 1;
+    margin-top: 10vh; 
+}
+.side-box {
+    width: 200px;
+    height: calc(100vh - 10vh);
+    background-color: #1f1f1f;
+    padding: 10px;
+    box-sizing: border-box;
+    position: fixed;
+    top: 10vh;
+    left: -200px; 
+    transition: left 0.3s;
+    z-index: 2;
+}
+.side-box.open {
+    left: 0; 
+}
+.side-box ul {
+    list-style-type: none;
+    padding: 0;
+}
+.side-box li {
+    margin-bottom: 10px;
+}
+.side-box a {
+    display: block;
+    padding: 10px;
+    background-color: #007bff; 
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+.side-box a:hover {
+    background-color: #0056b3; 
+}
+.content {
+    flex-grow: 1;
+    padding: 10px;
+    transition: padding-left 0.3s;
+    z-index: 1; 
+}
+.toggle-button {
+    position: fixed; 
+    top: 10vh;
+    left: 10px; 
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, left 0.3s; 
+    z-index: 2; 
+}
+.toggle-button:hover {
+    background-color: #0056b3;
+}
+.slideshow-container {
+    position: absolute; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0; 
+}
+.slideshow-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 1s;
+}
+.slideshow-container img.active {
+    opacity: 1;
+}
+.extra-content {
+    width: 100%;
+    padding: 20px;
+    background-color: rgba(18, 18, 18, 0.8);
+    color: #e0e0e0; 
+    font-size: 1.2em; 
+    z-index: 1;
+    margin-top: 20px; 
+}
+
+.accordion .accordion-item {
+    border-bottom: 1px solid #e5e5e5;
+}
+.accordion .accordion-item button[aria-expanded=true] {
+    border-bottom: 1px solid #03b5d2;
+}
+.accordion button {
+    position: relative;
+    display: block;
+    text-align: left;
+    width: 100%;
+    padding: 1em 0;
+    color: #7288a2;
+    font-size: 1.15rem;
+    font-weight: 400;
+    border: none;
+    background: none;
+    outline: none;
+}
+.accordion button:hover, .accordion button:focus {
+    cursor: pointer;
+    color: #4D4D4D;
+}
+.accordion button:hover::after, .accordion button:focus::after {
+    cursor: pointer;
+    color: #03b5d2;
+    border: 1px solid #03b5d2;
+}
+.accordion button .accordion-title {
+    padding: 1em 1.5em 1em 0;
+}
+.accordion button .icon {
+    display: inline-block;
+    position: absolute;
+    top: 18px;
+    right: 0;
+    width: 22px;
+    height: 22px;
+    border: 1px solid;
+    border-radius: 22px;
+}
+.accordion button .icon::before {
+    display: block;
+    position: absolute;
+    content: "";
+    top: 9px;
+    left: 5px;
+    width: 10px;
+    height: 2px;
+    background: currentColor;
+}
+.accordion button .icon::after {
+    display: block;
+    position: absolute;
+    content: "";
+    top: 5px;
+    left: 9px;
+    width: 2px;
+    height: 10px;
+    background: currentColor;
+}
+.accordion button[aria-expanded=true] {
+    color: #4D4D4D;
+}
+.accordion button[aria-expanded=true] .icon::after {
+    width: 0;
+}
+.accordion button[aria-expanded=true] + .accordion-content {
+    opacity: 1;
+    max-height: 9em;
+    transition: all 200ms linear;
+    will-change: opacity, max-height;
+}
+.accordion .accordion-content {
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: opacity 200ms linear, max-height 200ms linear;
+    will-change: opacity, max-height;
+}
+.accordion .accordion-content p {
+    font-size: 1rem;
+    font-weight: 300;
+    margin: 2em 0;
+}
+
+/* Применение шрифта к заголовкам аккордеона */
+.accordion button .accordion-title {
+    font-family: 'Minecraft', sans-serif; /* Замените 'Minecraft' на нужный вам шрифт */
+    font-size: 1.15rem; /* Настройте размер шрифта по вашему усмотрению */
+    font-weight: 400; /* Настройте толщину шрифта по вашему усмотрению */
+    color: #7288a2; /* Настройте цвет шрифта по вашему усмотрению */
+    padding: 1em 1.5em 1em 0;
+}
