@@ -34,7 +34,6 @@ function toggleAccordion() {
   const currentlyExpandedItem = document.querySelector('.accordion .accordion-item button[aria-expanded="true"]');
   
   if(currentlyExpandedItem && currentlyExpandedItem !== this) {
-    // Если есть уже открытый аккордеон, закрываем его
     currentlyExpandedItem.setAttribute('aria-expanded', 'false');
     const content = currentlyExpandedItem.nextElementSibling;
     content.style.maxHeight = null;
@@ -43,12 +42,10 @@ function toggleAccordion() {
 
   const content = this.nextElementSibling;
   if(this.getAttribute('aria-expanded') === 'false') {
-    // Открываем текущий аккордеон
     this.setAttribute('aria-expanded', 'true');
     content.style.maxHeight = `${content.scrollHeight}px`;
     content.style.opacity = '1';
   } else {
-    // Закрываем текущий аккордеон
     this.setAttribute('aria-expanded', 'false');
     content.style.maxHeight = null;
     content.style.opacity = '0';

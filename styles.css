@@ -239,11 +239,11 @@ body {
     margin: 2em 0;
 }
 
-/* Применение шрифта к заголовкам аккордеона */
+
 .accordion button .accordion-title {
-    font-family: 'Minecraft', sans-serif; /* Замените 'Minecraft' на нужный вам шрифт */
-    font-size: 1.15rem; /* Настройте размер шрифта по вашему усмотрению */
-    font-weight: 400; /* Настройте толщину шрифта по вашему усмотрению */
-    color: #7288a2; /* Настройте цвет шрифта по вашему усмотрению */
+    font-family: 'Minecraft', sans-serif;
+    font-size: 1.15rem; 
+    font-weight: 400; 
+    color: #7288a2;
     padding: 1em 1.5em 1em 0;
 }
